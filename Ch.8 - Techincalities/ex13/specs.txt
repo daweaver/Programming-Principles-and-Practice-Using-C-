@@ -1,0 +1,13 @@
+Task: Given a vector of strings, return a vector of ints, each 
+element is the number of characters in each string. 
+
+Ex: Input = {"Devere", "Troody", "Stella"}
+    Output = {6, 6, 6};
+
+function:
+* takes an a vector of strings as argumet
+* read the first string in the vector 
+    - use size() to return the lengt of the string or length()
+* count how many chars make up the string 
+* place that value into a vector of integers 
+* return that vector
