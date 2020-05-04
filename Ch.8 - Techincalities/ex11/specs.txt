@@ -1,0 +1,48 @@
+Task - Create a function that:
+    1) finds the smallest element of a vector
+    2) finds the largest element of a vector (use old function)
+    3) computes the mean of the vector values 
+    4) computes the media of the vector values 
+    5) returns either a struct containing the results
+      or, passes them back as reference arguments
+	** may possibly need to define a struct
+
+------------------------------------------------------------------------
+2) Find the largest element of a vector :
+* just reuse function
+
+------------------------------------------------------------------------
+1) Find the smallest element of a vector:
+* idea: do the reverse from the above vector
+* set the smallest variable to the first element 
+* compare the current element's value with the subsequent 
+  value and test which is smaller
+* store the smaller of the two then keep testing until 
+  the entire vector has been traversed
+
+------------------------------------------------------------------------
+3) Computes the mean 
+* mean = total/number of elements
+
+------------------------------------------------------------------------
+4) Compute the median 
+* median = for odd number vectors, the medain is the number that is 
+	exactly in the middle of the list. For even numbers the median
+	is the two middle numbers divided by two
+* test if the number of elements in a vector is even or odd
+* if odd:
+	- find the middle number in the vector. Divide the total number of
+	elements in the vector by 2
+
+-------------------------------------------------------------------------------
+Pass-by-reference:
+1. define variables in main(), they go out of scope once the function returns 
+2. return the variables by referencing the variable that is in main() 
+
+Returning a struct:
+1. name = calculation....?
+2. members
+	- smallest val
+	- largest val
+	- mean
+	- median 
