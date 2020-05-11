@@ -1,1 +1,27 @@
-test
+Task: Design and implement a Name_pairs class that holds pairs
+      (name, age) 
+==============================================================
+Data members:
+* name is a string stored in a vector of strings (member)
+* age is a double stored in a vector of doubles (member)
+
+==============================================================
+Member functions: 
+* read_names() operation should read a series of names and stores
+  them in the name vector
+* read_ages() operation should prompt the user for an age for each name
+	- needs to know how many names are in the vector 
+	- prompts user for the age of each element in the names vector 
+	- output the name so the user knows which name they are assigning an age to 
+* print() operation should print out the name, age pairs (name[i], age[i]) one per line
+	- do this in the order determined by the name vector 
+* sort() operation sould sort the name vector in alphabetical order and reorganizes the 
+  age vector to match 
+	- most difficult part for me 
+
+=============================================================
+Files:
+* main.cpp - where main() lives 
+* Name_pairs.h - where class declarations live
+* Name_pairs.cpp - where class definitions live 
+
