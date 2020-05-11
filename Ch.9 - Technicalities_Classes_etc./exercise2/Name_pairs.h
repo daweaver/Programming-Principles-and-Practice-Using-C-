@@ -4,18 +4,21 @@
 #include <vector>
 #include <algorithm>
 
-class Name_pairs
+namespace Name_Pairs
 {
-public:
-    // add constructor or just use default?
 
-    // modifying operations
-    void read_names();
-    void read_ages();
-    void print();
-    void sort();
+    class Name_pairs
+    {
+    public:
+        // modifying operations
+        void read_names();
+        void read_ages();
+        void print();
+        void sort();
+        int find_index(const std::string &n); 
 
-private:
-    std::vector<std::string> names{};
-    std::vector<double> ages{};
-};
+    private:
+        std::vector<std::string> names{};
+        std::vector<double> ages{};
+    };
+} // namespace Name_Pairs
