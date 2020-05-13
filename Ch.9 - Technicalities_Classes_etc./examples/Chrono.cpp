@@ -84,10 +84,10 @@ namespace Chrono // member function definitions
         // see exercise 10
     }
 
-    bool operator==(const Date &a, const Date &b)
+    bool operator==(const Date &a, const Date &b)       // compare if dates are the same
     {
         return a.year() == b.year() && a.month() == b.month() & a.day() == b.day();
-    }
+    }  
 
     bool operator!=(const Date &a, const Date &b)
     {

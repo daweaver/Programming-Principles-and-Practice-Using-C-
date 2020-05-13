@@ -1,7 +1,7 @@
 // Book class declarations
 #include <iostream>
 #include <string>
- 
+
 class Book
 {
 public:
@@ -32,22 +32,22 @@ public:
         return checked_out;
     }
 
-    std::string get_isbn()
+    std::string get_isbn() const // need to add const for const references
     {
         return isbn;
     }
 
-    std::string get_title()
+    std::string get_title() const
     {
         return title;
     }
 
-    std::string get_author()
+    std::string get_author() const
     {
         return author;
     }
 
-    std::string get_copyright_date()
+    std::string get_copyright_date() const
     {
         return copyright_date;
     }
@@ -59,3 +59,23 @@ private:
     std::string copyright_date{}; // may change type later
     bool checked_out{};
 };
+
+//=============================================================================
+// Helper functions
+//=============================================================================
+bool operator==(const Book &a, const Book &b) // test is ISBNs are the same
+{
+    return a.get_isbn() == b.get_isbn();
+}
+
+bool operator!=(const Book &a, const Book &b)
+{
+    return a.get_isbn() != b.get_isbn();
+}
+
+std::ostream &operator<<(std::ostream &os, const Book &a)   // format Book 
+{
+    return os << "ISBN: " << a.get_isbn() << '\n'
+              << "Title: " << a.get_title() << '\n'
+              << "Author: " << a.get_author() << '\n';
+}

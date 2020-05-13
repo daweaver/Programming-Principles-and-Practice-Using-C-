@@ -1,5 +1,5 @@
 // Chrono class declarations
-//#include "../../std_lib_facilities.h"
+#include "../../std_lib_facilities.h"
 namespace Chrono
 {
     //=============================================================================
@@ -58,8 +58,8 @@ namespace Chrono
     bool operator==(const Date &a, const Date &b);
     bool operator!=(const Date &a, const Date &b);
     
-    ostream &operator<<(ostream &os, const Date &d); // custom operators
-    istream &operator>>(istream &is, Date &dd);
+    std::ostream &operator<<(ostream &os, const Date &d); // custom operators
+    std::istream &operator>>(istream &is, Date &dd);
     
     Day day_of_week(const Date &d); // day of week of d
     Date next_Sunday(const Date d); // next Sunday after d
